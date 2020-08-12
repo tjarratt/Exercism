@@ -21,9 +21,6 @@ struct Grains {
     case inputTooHigh(String)
   }
 
-  private static let tooLowError = GrainsError.inputTooLow("tata")
-  private static let tooHighError = GrainsError.inputTooHigh("toto")
-
   private static func errorMessageFor(input: Int) -> String {
     return "Input[\(input)] invalid. Input should be between 1 and 64 (inclusive)"
   }
