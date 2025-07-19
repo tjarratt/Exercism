@@ -72,5 +72,12 @@ defmodule RulesTest do
     test "win if all dots eaten and touching a ghost with a power pellet active" do
       assert Rules.win?(true, true, true)
     end
+
+    test "don't win if not all dots eaten" do
+      refute Rules.win?(false, true, true)
+      refute Rules.win?(false, true, false)
+      refute Rules.win?(false, false, true)
+      refute Rules.win?(false, false, false)
+    end
   end
 end
